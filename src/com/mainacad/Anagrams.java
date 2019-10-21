@@ -17,8 +17,38 @@ public class Anagrams {
                     System.out.println("Числа являются анаграммами: " + word[i] + "  " + word[j]);
                 }
         }
+        String[] word1 = word.clone();
+        Arrays.sort(word1);
+//        String max = word1[];
+        String max = word1[word1.length-1];
+        int length = word1.length;
+        String string = "42";
+        int max_product = Integer.parseInt(string);
+        System.out.println("Максимальное значение: " + max_product(word1.length-1 * word1.length-2));
+        for(int i=0;i<word1.length;i++)
+        {
+            for(int j=i+1;j<word1.length;j++)
+            {
+                for(int k=j+1;k<word1.length;k++)
+                {
+                    int product = word1[i]*word1[j]*word1[k];
+                    if(product>=max)
+                    {
+                        max_product = product;
+                    }
+                }
+            }
+        }
+        return max_product;
+
+//        for (int i = 0; i != word1.length; i ++) {
+//            if (max > word1[i]) max = word1[i];
+//        }
+
     }
 
+    private static String max_product(int i) {
+    }
 
 
     private static boolean isRevers(String source, String revers) {
@@ -32,7 +62,9 @@ public class Anagrams {
         }
 
         return false;
+
     }
+
 
 
 
