@@ -19,6 +19,8 @@ public class Anagrams {
         }
     }
 
+
+
     private static boolean isRevers(String source, String revers) {
         char [] a = source.toCharArray(); // преобразуем строку в массив символов
         char [] b = revers.toCharArray();
