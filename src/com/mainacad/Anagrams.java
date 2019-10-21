@@ -11,8 +11,8 @@ public class Anagrams {
         String  text = in.nextLine();
         String[] word = text.split(" ");
 
-        for(int i = 0; i <= word.length - 1; i = i + 1) {
-            for(int j = i + 1; j <= word.length - 1; j = j + 1)
+        for(int i = 0; i <= word.length - 1; i++) {
+            for(int j = i + 1; j <= word.length - 1; j++)
                 if(isRevers(word[i],word[j]) == true) {
                     System.out.println("Числа являются анаграммами: " + word[i] + "  " + word[j]);
                 }
