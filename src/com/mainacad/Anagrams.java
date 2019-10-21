@@ -8,8 +8,8 @@ public class Anagrams {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите числа через пробел: ");
-        String  text = in.nextLine();    // cчитываем одну строку целиком
-        String[] word = text.split(" "); // переводим строку в массив данных
+        String  text = in.nextLine();
+        String[] word = text.split(" ");
 
         for(int i = 0; i <= word.length - 1; i = i + 1) {
             for(int j = i + 1; j <= word.length - 1; j = j + 1)
@@ -22,7 +22,7 @@ public class Anagrams {
 
 
     private static boolean isRevers(String source, String revers) {
-        char [] a = source.toCharArray(); // преобразуем строку в массив символов
+        char [] a = source.toCharArray();
         char [] b = revers.toCharArray();
         Arrays.sort(a);
         Arrays.sort(b);
